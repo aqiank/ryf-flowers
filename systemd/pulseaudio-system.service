@@ -1,0 +1,8 @@
+[Unit]
+Description=PulseAudio (System)
+
+[Service]
+ExecStart=/usr/bin/pulseaudio --realtime --system --disallow-exit --disallow-module-loading
+
+[Install]
+WantedBy=multi-user.target

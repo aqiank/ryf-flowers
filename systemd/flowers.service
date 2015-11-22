@@ -1,0 +1,13 @@
+[Unit]
+Description=Flowers (Ryf Zaini)
+After=pulseaudio-system.service
+Requires=pulseaudio-system.service
+
+[Service]
+ExecStart=/bin/sh /root/ryf-flowers/start.sh
+ExecStop=/bin/sh /root/ryf-flowers/stop.sh
+Restart=on-failure
+RestartSec=3s
+
+[Install]
+WantedBy=multi-user.target
